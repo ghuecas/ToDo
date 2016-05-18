@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="todolist">Cosas para hacer:</string>
+    <string name="nothing_to_do">Nada que hacer</string>
+    <string name="confirm">Guardar</string>
+    <string name="task">Tarea:</string>
+    <string name="edit_todo">Editar Tarea</string>
+    <string name="errorToDoVacio">La tarea no puede estar vacía</string>
+    <string name="cancel">Cancelar</string>
+    <string name="add_item">Añadir Tarea</string>
+    <string name="del_item">Borrar Ítem</string>
+    <string name="DeleteConfirmation">¿Eliminar item definitivamente?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+
+</resources>
