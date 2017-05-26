@@ -98,6 +98,10 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("POS", -1);
                 startActivityForResult(i, ACTIVITY_CREATE);
                 return true;
+            case R.id.delete_all_item:
+                Log.e(TAG, "Borramos todos los ítems");
+                borrarTodosLosElementos();
+                return true;
             default:
                 break;
         }
@@ -122,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId())
         {
-            case R.id.DelItem:
+            case R.id.delete_item:
                 borrarElemento(info.position);
                 return true;
             default:
@@ -179,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         Log.e("borrarElemento", "Comenzando");
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.DeleteConfirmation)
+        builder.setMessage(R.string.deleteItemConfirmation)
                 .setCancelable(false)
                 .setPositiveButton(R.string.yes,
                         new DialogInterface.OnClickListener()
@@ -203,6 +207,40 @@ public class MainActivity extends AppCompatActivity {
                         });
 
         Log.e("borrarElemento", "mostramos");
+//		AlertDialog alert = builder.create();
+//		alert.show();
+        builder.show();
+    }
+
+    public void borrarTodosLosElementos()
+    {
+        Log.e("borrarTodosLosElementos", "Comenzando");
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.deleteAllItemsConfirmation)
+                .setCancelable(false)
+                .setPositiveButton(R.string.yes,
+                        new DialogInterface.OnClickListener()
+                        {
+                            public void onClick(DialogInterface dialog, int id)
+                            {
+                                toDoItemList.clear();
+                                adaptador.notifyDataSetChanged();
+
+                                Log.e("borrarTodosLosElementos", "setPositiveButton");
+                            }
+                        })
+                .setNegativeButton(R.string.no,
+                        new DialogInterface.OnClickListener()
+                        {
+                            public void onClick(DialogInterface dialog, int id)
+                            {
+                                Log.e("borrarTodosLosElementos", "setNegativeButton");
+                                dialog.cancel();
+                            }
+                        });
+
+        Log.e("borrarTodosLosElementos", "mostramos");
 //		AlertDialog alert = builder.create();
 //		alert.show();
         builder.show();

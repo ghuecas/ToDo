@@ -8,8 +8,10 @@
     <string name="errorToDoVacio">La tarea no puede estar vacía</string>
     <string name="cancel">Cancelar</string>
     <string name="add_item">Añadir Tarea</string>
-    <string name="del_item">Borrar Ítem</string>
-    <string name="DeleteConfirmation">¿Eliminar item definitivamente?</string>
+    <string name="delete_item">Borrar Tarea</string>
+    <string name="delete_all_items">Borrar TODO</string>
+    <string name="deleteItemConfirmation">¿Eliminar item definitivamente?</string>
+    <string name="deleteAllItemsConfirmation">¿Borrar TODOS los elementos definitivamente?</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
 
