@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         toDoItemList.add(new ToDoItem("Usar el adaptador"));
 
         // adaptador de contenidos
-        adaptador = new ArrayAdapter<ToDoItem>(this, R.layout.todo_row,
+        // we use the default layout for a row, which present just a string
+        adaptador = new ArrayAdapter<ToDoItem>(this, android.R.layout.simple_list_item_1,
                 toDoItemList);
 
         listView = (ListView) findViewById(R.id.listView);
