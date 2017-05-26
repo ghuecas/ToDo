@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ToDo</string>
+    <string name="app_name">ToDo0</string>
     <string name="todolist">Cosas para hacer:</string>
     <string name="nothing_to_do">No hay tareas pendientes</string>
     <string name="confirm">Guardar</string>
